@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User In Schools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>School</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Degree</th>
+      <th>Description</th>
+      <th>Fields</th>
+      <th>Linkedin</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_in_schools.each do |user_in_school| %>
+      <tr>
+        <td><%= user_in_school.user_id %></td>
+        <td><%= user_in_school.school_id %></td>
+        <td><%= user_in_school.start_date %></td>
+        <td><%= user_in_school.end_date %></td>
+        <td><%= user_in_school.degree %></td>
+        <td><%= user_in_school.description %></td>
+        <td><%= user_in_school.fields %></td>
+        <td><%= user_in_school.linkedin_id %></td>
+        <td><%= user_in_school.string %></td>
+        <td><%= link_to 'Show', user_in_school %></td>
+        <td><%= link_to 'Edit', edit_user_in_school_path(user_in_school) %></td>
+        <td><%= link_to 'Destroy', user_in_school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User In School', new_user_in_school_path %>

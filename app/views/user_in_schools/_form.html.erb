@@ -1,0 +1,62 @@
+<%= form_with(model: user_in_school, local: true) do |form| %>
+  <% if user_in_school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_in_school.errors.count, "error") %> prohibited this user_in_school from being saved:</h2>
+
+      <ul>
+      <% user_in_school.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :user_in_school_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :school_id %>
+    <%= form.text_field :school_id, id: :user_in_school_school_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, id: :user_in_school_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.text_field :end_date, id: :user_in_school_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :degree %>
+    <%= form.text_field :degree, id: :user_in_school_degree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :user_in_school_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fields %>
+    <%= form.text_field :fields, id: :user_in_school_fields %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin_id %>
+    <%= form.text_field :linkedin_id, id: :user_in_school_linkedin_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :string %>
+    <%= form.text_field :string, id: :user_in_school_string %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_in_company.user_id %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @user_in_company.company_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @user_in_company.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @user_in_company.end_date %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @user_in_company.position %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @user_in_company.description %>
+</p>
+
+<%= link_to 'Edit', edit_user_in_company_path(@user_in_company) %> |
+<%= link_to 'Back', user_in_companies_path %>

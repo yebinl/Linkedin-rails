@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Linkedin</th>
+      <th>Linkedin url</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= user.first_name %> <%= user.last_name %></td>
+        <td><%= user.linkedin_id %></td>
+        <td><%= user.linkedin_url %></td>
+        <td><%= user.description %></td>
+        <td><%= link_to 'Show', user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</center>
+<br>
+

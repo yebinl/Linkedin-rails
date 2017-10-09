@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Company url</th>
+      <th>Industry</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= company.company_name %></td>
+        <td><%= company.company_location %></td>
+        <td><%= company.company_url %></td>
+        <td><%= company.industry %></td>
+        <td><%= link_to 'Show', company %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</center>
+<br>
